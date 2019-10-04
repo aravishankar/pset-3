@@ -49,7 +49,16 @@ public class ProblemSet3 {
      */
     
     public void sign() {
+        System.out.print("\nEnter an integer: ");
+        long input = in.nextLong();
 
+        if (input > 0) {
+            System.out.println("\nPositive.");
+        } else if (input < 0) {
+            System.out.println("\nNegative.");
+        } else {
+            System.out.println("\nZero.");
+        }
     }
     
     /*
@@ -59,7 +68,14 @@ public class ProblemSet3 {
      */
     
     public void parity() {
+        System.out.print("\nEnter an integer: ");
+        long input = in.nextLong();
 
+        if ((input % 2) == 0) {
+            System.out.println("\nEven.");
+        } else {
+            System.out.println("\nOdd.");
+        }
     }
     
     /*
@@ -69,7 +85,30 @@ public class ProblemSet3 {
      */
     
     public void ordered() {
+        System.out.println("\nEnter three integers.");
 
+        System.out.print("\nEnter integer: ");
+        long input1 = in.nextLong();
+        System.out.print("Enter integer: ");
+        long input2 = in.nextLong();
+        System.out.print("Enter integer: ");
+        long input3 = in.nextLong();
+
+        if (input3 == input2 && input2 == input1) {
+            System.out.println("\nSame.");
+        } else if (input3 > input2 && input2 > input1) {
+            System.out.println("\nStrictly increasing.");
+        } else if (input3 >= input2 && input2 >= input1) {
+            System.out.println("\nIncreasing.");
+        } else if (input3 < input2 && input2 < input1) {
+            System.out.println("\nStritly decreasing.");
+        } else if (input3 <= input2 && input2 <= input1) {
+            System.out.println("\nDecreasing.");
+        } else if (input3 <= input2 && input2 <= input1) {
+            System.out.println("\nDecreasing.");
+        } else {
+            System.out.println("\nUnordered.");
+        }
     }
     
     /*
@@ -79,7 +118,8 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
-
+        System.out.print("Enter a letter grade: ");
+        String input = in.next();
     }
     
     /*
