@@ -28,13 +28,13 @@ public class ProblemSet3 {
         
         // comment out or uncomment as needed
         
-        ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
-        ps.ordered();       // executes Exercise 3
-        ps.gpa();           // executes Exercise 4
-        ps.grade();         // executes Exercise 5
+//        ps.sign();          // executes Exercise 1
+//        ps.parity();        // executes Exercise 2
+//        ps.ordered();       // executes Exercise 3
+//Muy mal        ps.gpa();           // executes Exercise 4
+//        ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
-        ps.leapYear();      // executes Exercise 7
+//        ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -118,8 +118,42 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
-        System.out.print("Enter a letter grade: ");
-        String input = in.next();
+        // System.out.print("Enter a letter grade: ");
+        // String input = in.next();
+        // String letter = String.valueOf(input.charAt(0));
+        // try {
+        //     String additive = String.valueOf(input.charAt(1));
+        // } catch (Exception e) {
+
+        // }
+        // double gpaVar = 0;
+        
+        // if (letter == "A") {
+        //     gpaVar += 4.00;
+        // } else if (letter == "B") {
+        //     gpaVar += 3.00;
+        // } else if (letter == "C") {
+        //     gpaVar += 2.00;
+        // } else if (letter == "D") {
+        //     gpaVar += 1.00;
+        // } else if (letter == "F") {
+        //     gpaVar += 0.00;
+        // }
+
+        // if (letter == "F") {
+
+        // } else {
+        //     // if (additive == null) {
+
+        //     // } else if (additive == '+') {
+        //     //     gpa += 0.33;
+        //     // } else if (additive == '-') {
+        //     //     gpa -= 0.33;
+        //     // }
+        // }
+        
+
+        // System.out.printf("Your GPA is %.2f.", gpaVar);
     }
     
     /*
@@ -129,6 +163,24 @@ public class ProblemSet3 {
      */
     
     public void grade() {
+        System.out.print("\nEnter a grade: ");
+        double grade = in.nextDouble();
+
+        if (grade >= 90 && grade <= 100) {
+            System.out.println("\nYou recieved an A.");
+        } else if (grade < 90 && grade >= 80) {
+            System.out.println("\nYou recieved a B.");
+        } else if (grade < 80 && grade >= 70) {
+            System.out.println("\nYou recieved a C.");
+        } else if (grade < 70 && grade >= 60) {
+            System.out.println("\nYou recieved a D.");
+        } else if (grade < 60 && grade >= 0) {
+            System.out.println("\nYou recieved an F.");
+        } else if (grade < 0) {
+            System.out.println("\nGrades below 0 are invalid.");
+        } else if (grade > 100) {
+            System.out.println("\nGrades above 100 are invalid.");
+        }
 
     }
     
@@ -149,7 +201,16 @@ public class ProblemSet3 {
      */
     
     public void leapYear() {
+        System.out.print("\nEnter a year: ");
+        long year = in.nextLong();
 
+        if (year >= 0){
+            if ((year%4 == 0) && ((year%100 != 0) || (year%400 == 0))) {
+                System.out.printf("\n%d is a leap year.", year);
+            } else {
+                System.out.printf("\n%d is not a leap year.", year);
+            }
+        }
     }
     
     /*
@@ -160,7 +221,30 @@ public class ProblemSet3 {
      */
     
     public void state() {
+        System.out.print("\nEnter a temperature: ");
+        double temperature = in.nextDouble();
+        System.out.print("\nEnter a scale: ");
+        String scale = in.next();
 
+        if (scale == "C") {
+            if (temperature >= 100) {
+                System.out.println("Gas.");
+            } else if (0 < temperature && temperature < 100) {
+                System.out.println("Liquid.");
+            } else {
+                System.out.println("Solid.");
+            }
+        } else if (scale == "F") {
+            if (temperature >= 212) {
+                System.out.println("Gas.");
+            } else if (32 < temperature && temperature < 212) {
+                System.out.println("Liquid.");
+            } else {
+                System.out.println("Solid.");
+            }
+        }
+
+        
     }
     
     /*
