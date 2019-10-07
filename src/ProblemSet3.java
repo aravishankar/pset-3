@@ -28,13 +28,13 @@ public class ProblemSet3 {
         
         // comment out or uncomment as needed
         
-//        ps.sign();          // executes Exercise 1
-//        ps.parity();        // executes Exercise 2
-//        ps.ordered();       // executes Exercise 3
-//Muy mal        ps.gpa();           // executes Exercise 4
-//        ps.grade();         // executes Exercise 5
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
+        ps.ordered();       // executes Exercise 3
+        ps.gpa();           // executes Exercise 4
+        ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
-//        ps.leapYear();      // executes Exercise 7
+        ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -118,42 +118,68 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
-        // System.out.print("Enter a letter grade: ");
-        // String input = in.next();
-        // String letter = String.valueOf(input.charAt(0));
-        // try {
-        //     String additive = String.valueOf(input.charAt(1));
-        // } catch (Exception e) {
+        System.out.print("\nEnter a letter grade: ");
+        String input = in.next();
+        String letter = String.valueOf(input.charAt(0));
+        String additive = "Arbitrary";
+        try {
+            additive = String.valueOf(input.charAt(1));
+        } catch (Exception e) {
+            
+        }
+        double gpaVar = 0;
 
-        // }
-        // double gpaVar = 0;
+        switch (letter) {
+            case "A":
+                gpaVar += 4.00;
+                break;
+
+            case "B":
+                gpaVar += 3.00;
+                break;
+            
+            case "C":
+                gpaVar += 2.00;
+                break;
+            
+            case "D":
+                gpaVar += 1.00;
+                break;
+            
+            case "F":
+                gpaVar += 0.00;
+                break;
+            
+            default:
+                System.out.println("\nThat's not a valid letter grade.");
+                break;
+        }
+
+        if (letter == "F") {
+
+        } else if (letter == "A") {
+            if (additive == "-") {
+                gpaVar -= 0.33;
+            }
+        } else {
+            switch (additive) {
+                case "+":
+                    gpaVar += 0.33;
+                    break;
+
+                case "-":
+                    gpaVar -= 0.33;
+                    break;
+                
+                default:
+                    break;
+            }
+
+        }
         
-        // if (letter == "A") {
-        //     gpaVar += 4.00;
-        // } else if (letter == "B") {
-        //     gpaVar += 3.00;
-        // } else if (letter == "C") {
-        //     gpaVar += 2.00;
-        // } else if (letter == "D") {
-        //     gpaVar += 1.00;
-        // } else if (letter == "F") {
-        //     gpaVar += 0.00;
-        // }
-
-        // if (letter == "F") {
-
-        // } else {
-        //     // if (additive == null) {
-
-        //     // } else if (additive == '+') {
-        //     //     gpa += 0.33;
-        //     // } else if (additive == '-') {
-        //     //     gpa -= 0.33;
-        //     // }
-        // }
         
 
-        // System.out.printf("Your GPA is %.2f.", gpaVar);
+        System.out.printf("\nYour GPA is %.2f.\n", gpaVar);
     }
     
     /*
@@ -191,6 +217,118 @@ public class ProblemSet3 {
      */
     
     public void cards() {
+        System.out.print("\nEnter a card: ");
+        String card = in.next();
+        String rank = card.substring(0,1);
+        String suite = card.substring(1);
+        String fullRank = "Yeet";
+        String fullSuite = "Yeet";
+        boolean legit = false;
+
+        switch (rank) {
+            case "2":
+                fullRank = "Two";
+                legit = true;
+                break;
+
+            case "3":
+                fullRank = "Three";
+                legit = true;                
+                break;
+
+            case "4":
+                fullRank = "Four";
+                legit = true;
+                break;
+
+            case "5":
+                fullRank = "Five";
+                legit = true;
+                break;
+
+            case "6":
+                fullRank = "Six";
+                legit = true;
+                break;
+
+            case "7":
+                fullRank = "Seven";
+                legit = true;
+                break;
+
+            case "8":
+                fullRank = "Eight";
+                legit = true;
+                break;
+
+            case "9":
+                fullRank = "Nine";
+                legit = true;
+                break;
+
+            case "T":
+                fullRank = "Ten";
+                legit = true;
+                break;
+
+            case "J":
+                fullRank = "Jack";
+                legit = true;
+                break;
+
+            case "Q":
+                fullRank = "Queen";
+                legit = true;
+                break;
+
+            case "K":
+                fullRank = "King";
+                legit = true;
+                break;
+
+            case "A":
+                fullRank = "Ace";
+                legit = true;
+                break;
+ 
+            default:
+                System.out.println("That's not a valid rank.");
+                legit = false;
+                break;
+        }        
+
+        if (legit) {
+            switch (suite) {
+                case "C":
+                    fullSuite = "Clubs";
+                    legit = true;
+                    break;
+
+                case "D":
+                    fullSuite = "Diamonds";
+                    legit = true;
+                    break;
+
+                case "H":
+                    fullSuite = "Hearts";
+                    legit = true;
+                    break;
+
+                case "S":
+                    fullSuite = "Spades";
+                    legit = true;
+                    break;
+                
+                default:
+                    System.out.println("\nThat's not a valid suit.");
+                    legit = false;
+                    break;
+            }
+        }
+        
+        if (legit) {
+            System.out.println("\n" + fullRank + " of " + fullSuite + ".");
+        }
 
     }
     
@@ -221,27 +359,35 @@ public class ProblemSet3 {
      */
     
     public void state() {
-        System.out.print("\nEnter a temperature: ");
+        System.out.print("\n\nEnter a temperature: ");
         double temperature = in.nextDouble();
-        System.out.print("\nEnter a scale: ");
+        System.out.print("Enter a scale: ");
         String scale = in.next();
 
-        if (scale == "C") {
-            if (temperature >= 100) {
-                System.out.println("Gas.");
-            } else if (0 < temperature && temperature < 100) {
-                System.out.println("Liquid.");
-            } else {
-                System.out.println("Solid.");
-            }
-        } else if (scale == "F") {
-            if (temperature >= 212) {
-                System.out.println("Gas.");
-            } else if (32 < temperature && temperature < 212) {
-                System.out.println("Liquid.");
-            } else {
-                System.out.println("Solid.");
-            }
+        switch (scale) {
+            case "C":
+                if (temperature >= 100) {
+                    System.out.println("\nGas.");
+                } else if (0 < temperature && temperature < 100) {
+                    System.out.println("\nLiquid.");
+                } else {
+                    System.out.println("\nSolid.");
+                }
+                break;
+
+            case "F":
+                if (temperature >= 212) {
+                    System.out.println("\nGas.");
+                } else if (32 < temperature && temperature < 212) {
+                    System.out.println("\nLiquid.");
+                } else {
+                    System.out.println("\nSolid.");
+                }
+                break;
+            
+            default:
+                System.out.println("\nThat's not a valid scale.");
+                break;
         }
 
         
@@ -254,6 +400,62 @@ public class ProblemSet3 {
      */
     
     public void months() {        
+        System.out.print("\nEnter a month: ");
+        String month = in.next().substring(0,3);
+
+        switch (month) {
+            case "Jan":
+                System.out.println("\n31 days.");
+                break;
+            
+            case "Feb":
+                System.out.println("\n28 or 29 days.");
+                break;
+        
+            case "Mar":
+                System.out.println("\n31 days.");
+                break;
+
+            case "Apr":
+                System.out.println("\n30 days.");
+                break;
+
+            case "May":
+                System.out.println("\n31 days.");
+                break;
+
+            case "Jun":
+                System.out.println("\n30 days.");
+                break;
+
+            case "Jul":
+                System.out.println("\n31 days.");
+                break;
+        
+            case "Aug":
+                System.out.println("\n31 days.");
+                break;
+
+            case "Sep":
+                System.out.println("\n30 days.");
+                break;
+
+            case "Oct":
+                System.out.println("\n31 days.");
+                break;
+
+            case "Nov":
+                System.out.println("\n30 days.");
+                break;
+
+            case "Dec":
+                System.out.println("\n31 days.");
+                break;
+        
+            default:
+                System.out.println("\nThat's not a valid month.");
+                break;
+        }
 
     }
     
@@ -264,6 +466,31 @@ public class ProblemSet3 {
      */
     
     public void salary() {
+        
+        final double OVERTIME_THRESHOLD = 40;
+        final double OVERTIME_PAY_MULTIPLIER = 1.5;
+        
+        System.out.print("\nWage: ");
+        double wage = in.nextDouble();
+        if (wage < 0.00) {
+            System.out.println("Your wage must be greater than or equal to $0.00/hour.");
+        }
+        System.out.print("Hours: ");
+        double hours = in.nextDouble();
+        if (hours < 0.0) {
+            System.out.println("Your hours must be greater than or equal to 0.0.");
+        }
+        double pay;
+        double overtimeHours;
+
+        if (hours > OVERTIME_THRESHOLD) {
+            overtimeHours = hours-OVERTIME_THRESHOLD;
+            pay = 40*wage + overtimeHours*OVERTIME_PAY_MULTIPLIER*wage;
+            System.out.printf("\nYou'll make $%,.2f this week.", pay);
+        } else {
+            pay = hours*wage;
+            System.out.printf("\nYou'll make $%,.2f this week.", pay);
+        }
 
     }
 }
