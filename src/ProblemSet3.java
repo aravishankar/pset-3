@@ -401,60 +401,162 @@ public class ProblemSet3 {
     
     public void months() {        
         System.out.print("\nEnter a month: ");
-        String month = in.next().substring(0,3);
+        String month = in.next();
 
-        switch (month) {
-            case "Jan":
-                System.out.println("\n31 days.");
-                break;
+        if (month.length() == 3) {
+            switch (month) {
+                case "Jan":
+                    System.out.println("\n31 days.");
+                    break;
+                
+                case "Feb":
+                    System.out.println("\n28 or 29 days.");
+                    break;
             
-            case "Feb":
-                System.out.println("\n28 or 29 days.");
-                break;
-        
-            case "Mar":
-                System.out.println("\n31 days.");
-                break;
+                case "Mar":
+                    System.out.println("\n31 days.");
+                    break;
 
-            case "Apr":
-                System.out.println("\n30 days.");
-                break;
+                case "Apr":
+                    System.out.println("\n30 days.");
+                    break;
 
-            case "May":
-                System.out.println("\n31 days.");
-                break;
+                case "May":
+                    System.out.println("\n31 days.");
+                    break;
 
-            case "Jun":
-                System.out.println("\n30 days.");
-                break;
+                case "Jun":
+                    System.out.println("\n30 days.");
+                    break;
 
-            case "Jul":
-                System.out.println("\n31 days.");
-                break;
-        
-            case "Aug":
-                System.out.println("\n31 days.");
-                break;
+                case "Jul":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                case "Aug":
+                    System.out.println("\n31 days.");
+                    break;
 
-            case "Sep":
-                System.out.println("\n30 days.");
-                break;
+                case "Sep":
+                    System.out.println("\n30 days.");
+                    break;
 
-            case "Oct":
-                System.out.println("\n31 days.");
-                break;
+                case "Oct":
+                    System.out.println("\n31 days.");
+                    break;
 
-            case "Nov":
-                System.out.println("\n30 days.");
-                break;
+                case "Nov":
+                    System.out.println("\n30 days.");
+                    break;
 
-            case "Dec":
-                System.out.println("\n31 days.");
-                break;
-        
-            default:
-                System.out.println("\nThat's not a valid month.");
-                break;
+                case "Dec":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                default:
+                    System.out.println("\nThat's not a valid month.");
+                    break;
+            }
+        } else if (month.length() == 4) {
+            switch (month) {
+                case "Janu":
+                    System.out.println("\n31 days.");
+                    break;
+                
+                case "Febr":
+                    System.out.println("\n28 or 29 days.");
+                    break;
+            
+                case "Marc":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "Apri":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "June":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "July":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                case "Augu":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "Sept":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "Octo":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "Nove":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "Dece":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                default:
+                    System.out.println("\nThat's not a valid month.");
+                    break;
+            }
+        } else {
+            switch (month) {
+                case "January":
+                    System.out.println("\n31 days.");
+                    break;
+                
+                case "February":
+                    System.out.println("\n28 or 29 days.");
+                    break;
+            
+                case "March":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "April":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "June":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "July":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                case "August":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "September":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "October":
+                    System.out.println("\n31 days.");
+                    break;
+
+                case "November":
+                    System.out.println("\n30 days.");
+                    break;
+
+                case "December":
+                    System.out.println("\n31 days.");
+                    break;
+            
+                default:
+                    System.out.println("\nThat's not a valid month.");
+                    break;
+            }
         }
 
     }
