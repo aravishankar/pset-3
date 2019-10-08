@@ -49,6 +49,7 @@ public class ProblemSet3 {
      */
     
     public void sign() {
+
         System.out.print("\nEnter an integer: ");
         long input = in.nextLong();
 
@@ -68,6 +69,7 @@ public class ProblemSet3 {
      */
     
     public void parity() {
+
         System.out.print("\nEnter an integer: ");
         long input = in.nextLong();
 
@@ -85,26 +87,27 @@ public class ProblemSet3 {
      */
     
     public void ordered() {
+
         System.out.println("\nEnter three integers.");
 
         System.out.print("\nEnter integer: ");
-        long input1 = in.nextLong();
+        long firstInteger = in.nextLong();
         System.out.print("Enter integer: ");
-        long input2 = in.nextLong();
+        long secondInteger = in.nextLong();
         System.out.print("Enter integer: ");
-        long input3 = in.nextLong();
+        long thirdInteger = in.nextLong();
 
-        if (input3 == input2 && input2 == input1) {
+        if (thirdInteger == secondInteger && secondInteger == firstInteger) {
             System.out.println("\nSame.");
-        } else if (input3 > input2 && input2 > input1) {
+        } else if (thirdInteger > secondInteger && secondInteger > firstInteger) {
             System.out.println("\nStrictly increasing.");
-        } else if (input3 >= input2 && input2 >= input1) {
+        } else if (thirdInteger >= secondInteger && secondInteger >= firstInteger) {
             System.out.println("\nIncreasing.");
-        } else if (input3 < input2 && input2 < input1) {
+        } else if (thirdInteger < secondInteger && secondInteger < firstInteger) {
             System.out.println("\nStritly decreasing.");
-        } else if (input3 <= input2 && input2 <= input1) {
+        } else if (thirdInteger <= secondInteger && secondInteger <= firstInteger) {
             System.out.println("\nDecreasing.");
-        } else if (input3 <= input2 && input2 <= input1) {
+        } else if (thirdInteger <= secondInteger && secondInteger <= firstInteger) {
             System.out.println("\nDecreasing.");
         } else {
             System.out.println("\nUnordered.");
@@ -118,14 +121,15 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
+
         System.out.print("\nEnter a letter grade: ");
         String input = in.next();
         String letter = String.valueOf(input.charAt(0));
-        String additive = "Arbitrary";
+        String additive = "Arbitrary Value";
         try {
             additive = String.valueOf(input.charAt(1));
         } catch (Exception e) {
-            
+            //Nothing
         }
         double gpaVar = 0;
 
@@ -156,7 +160,7 @@ public class ProblemSet3 {
         }
 
         if (letter == "F") {
-
+            //Do Nothing
         } else if (letter == "A") {
             if (additive == "-") {
                 gpaVar -= 0.33;
@@ -176,10 +180,9 @@ public class ProblemSet3 {
             }
 
         }
-        
-        
 
         System.out.printf("\nYour GPA is %.2f.\n", gpaVar);
+
     }
     
     /*
@@ -189,6 +192,7 @@ public class ProblemSet3 {
      */
     
     public void grade() {
+
         System.out.print("\nEnter a grade: ");
         double grade = in.nextDouble();
 
@@ -207,7 +211,6 @@ public class ProblemSet3 {
         } else if (grade > 100) {
             System.out.println("\nGrades above 100 are invalid.");
         }
-
     }
     
     /*
@@ -217,9 +220,10 @@ public class ProblemSet3 {
      */
     
     public void cards() {
+
         System.out.print("\nEnter a card: ");
         String card = in.next();
-        String rank = card.substring(0,1);
+        String rank = card.substring(0, 1);
         String suite = card.substring(1);
         String fullRank = "Yeet";
         String fullSuite = "Yeet";
@@ -339,11 +343,12 @@ public class ProblemSet3 {
      */
     
     public void leapYear() {
+
         System.out.print("\nEnter a year: ");
         long year = in.nextLong();
 
         if (year >= 0){
-            if ((year%4 == 0) && ((year%100 != 0) || (year%400 == 0))) {
+            if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
                 System.out.printf("\n%d is a leap year.", year);
             } else {
                 System.out.printf("\n%d is not a leap year.", year);
@@ -359,6 +364,7 @@ public class ProblemSet3 {
      */
     
     public void state() {
+
         System.out.print("\n\nEnter a temperature: ");
         double temperature = in.nextDouble();
         System.out.print("Enter a scale: ");
@@ -399,7 +405,8 @@ public class ProblemSet3 {
      * Prompt the user to enter a month. How many days are in that month?
      */
     
-    public void months() {        
+    public void months() {
+
         System.out.print("\nEnter a month: ");
         String month = in.next();
 
@@ -586,13 +593,12 @@ public class ProblemSet3 {
         double overtimeHours;
 
         if (hours > OVERTIME_THRESHOLD) {
-            overtimeHours = hours-OVERTIME_THRESHOLD;
-            pay = 40*wage + overtimeHours*OVERTIME_PAY_MULTIPLIER*wage;
-            System.out.printf("\nYou'll make $%,.2f this week.", pay);
+            overtimeHours = hours - OVERTIME_THRESHOLD;
+            pay = 40 * wage + overtimeHours * OVERTIME_PAY_MULTIPLIER * wage;
+            System.out.printf("\nYou'll make $%,.2f this week.\n", pay);
         } else {
-            pay = hours*wage;
-            System.out.printf("\nYou'll make $%,.2f this week.", pay);
+            pay = hours * wage;
+            System.out.printf("\nYou'll make $%,.2f this week.\n", pay);
         }
-
     }
 }
