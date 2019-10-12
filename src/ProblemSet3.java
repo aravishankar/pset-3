@@ -122,6 +122,16 @@ public class ProblemSet3 {
     
     public void gpa() {
 
+        final double VALUE_A = 4.00;
+        final double VALUE_B = 3.00;
+        final double VALUE_C = 2.00;
+        final double VALUE_D = 1.00;
+        final double VALUE_F = 0.00;
+
+        final double VALUE_PLUS = 0.33;
+        final double VALUE_MINUS = -0.33;
+
+
         System.out.print("\nEnter a letter grade: ");
         String input = in.next();
         String letter = String.valueOf(input.charAt(0));
@@ -135,23 +145,23 @@ public class ProblemSet3 {
 
         switch (letter) {
             case "A":
-                gpaVar += 4.00;
+                gpaVar += VALUE_A;
                 break;
 
             case "B":
-                gpaVar += 3.00;
+                gpaVar += VALUE_B;
                 break;
             
             case "C":
-                gpaVar += 2.00;
+                gpaVar += VALUE_C;
                 break;
             
             case "D":
-                gpaVar += 1.00;
+                gpaVar += VALUE_D;
                 break;
             
             case "F":
-                gpaVar += 0.00;
+                gpaVar += VALUE_F;
                 break;
             
             default:
@@ -163,16 +173,16 @@ public class ProblemSet3 {
             //Do Nothing
         } else if (letter == "A") {
             if (additive == "-") {
-                gpaVar -= 0.33;
+                gpaVar += VALUE_MINUS;
             }
         } else {
             switch (additive) {
                 case "+":
-                    gpaVar += 0.33;
+                    gpaVar += VALUE_PLUS;
                     break;
 
                 case "-":
-                    gpaVar -= 0.33;
+                    gpaVar += VALUE_MINUS;
                     break;
                 
                 default:
@@ -193,22 +203,30 @@ public class ProblemSet3 {
     
     public void grade() {
 
+        final double UPPER_THRESHOLD_A = 100;
+        final double THRESHOLD_A = 90;
+        final double THRESHOLD_B = 80;
+        final double THRESHOLD_C = 70;
+        final double THRESHOLD_D = 60;
+        final double THRESHOLD_F = 0;
+
+
         System.out.print("\nEnter a grade: ");
         double grade = in.nextDouble();
 
-        if (grade >= 90 && grade <= 100) {
+        if (grade >= THRESHOLD_A && grade <= UPPER_THRESHOLD_A) {
             System.out.println("\nYou recieved an A.");
-        } else if (grade < 90 && grade >= 80) {
+        } else if (grade < THRESHOLD_A && grade >= THRESHOLD_B) {
             System.out.println("\nYou recieved a B.");
-        } else if (grade < 80 && grade >= 70) {
+        } else if (grade < THRESHOLD_B && grade >= THRESHOLD_C) {
             System.out.println("\nYou recieved a C.");
-        } else if (grade < 70 && grade >= 60) {
+        } else if (grade < THRESHOLD_C && grade >= THRESHOLD_D) {
             System.out.println("\nYou recieved a D.");
-        } else if (grade < 60 && grade >= 0) {
+        } else if (grade < THRESHOLD_D && grade >= THRESHOLD_F) {
             System.out.println("\nYou recieved an F.");
-        } else if (grade < 0) {
+        } else if (grade < THRESHOLD_F) {
             System.out.println("\nGrades below 0 are invalid.");
-        } else if (grade > 100) {
+        } else if (grade > THRESHOLD_A) {
             System.out.println("\nGrades above 100 are invalid.");
         }
     }
@@ -225,8 +243,8 @@ public class ProblemSet3 {
         String card = in.next();
         String rank = card.substring(0, 1);
         String suite = card.substring(1);
-        String fullRank = "Yeet";
-        String fullSuite = "Yeet";
+        String fullRank = "Arbitrary";
+        String fullSuite = "Arbitrary";
         boolean legit = false;
 
         switch (rank) {
@@ -365,6 +383,11 @@ public class ProblemSet3 {
     
     public void state() {
 
+        final double FREEZING_POINT_CELSIUS = 0;
+        final double FREEZING_POINT_FAHRENHEIT = 32;
+        final double BOILING_POINT_CELSIUS = 100;
+        final double BOILING_POINT_FAHRENHEIT = 212;
+
         System.out.print("\n\nEnter a temperature: ");
         double temperature = in.nextDouble();
         System.out.print("Enter a scale: ");
@@ -372,9 +395,9 @@ public class ProblemSet3 {
 
         switch (scale) {
             case "C":
-                if (temperature >= 100) {
+                if (temperature >= BOILING_POINT_CELSIUS) {
                     System.out.println("\nGas.");
-                } else if (0 < temperature && temperature < 100) {
+                } else if (FREEZING_POINT_CELSIUS < temperature && temperature < BOILING_POINT_CELSIUS) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
@@ -382,9 +405,9 @@ public class ProblemSet3 {
                 break;
 
             case "F":
-                if (temperature >= 212) {
+                if (temperature >= BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nGas.");
-                } else if (32 < temperature && temperature < 212) {
+                } else if (FREEZING_POINT_FAHRENHEIT < temperature && temperature < BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
