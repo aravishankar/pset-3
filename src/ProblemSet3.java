@@ -397,7 +397,7 @@ public class ProblemSet3 {
                 if (temperature >= BOILING_POINT_CELSIUS) {
                     System.out.println("\nGas.");
                 } else if (FREEZING_POINT_CELSIUS < temperature && 
-                    temperature < BOILING_POINT_CELSIUS) {
+                  temperature < BOILING_POINT_CELSIUS) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
@@ -408,7 +408,7 @@ public class ProblemSet3 {
                 if (temperature >= BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nGas.");
                 } else if (FREEZING_POINT_FAHRENHEIT < temperature && 
-                    temperature < BOILING_POINT_FAHRENHEIT) {
+                  temperature < BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
