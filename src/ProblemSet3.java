@@ -189,9 +189,7 @@ public class ProblemSet3 {
             }
 
         }
-
         System.out.printf("\nYour GPA is %.2f.\n", gpaVar);
-
     }
     
     /*
@@ -391,11 +389,10 @@ public class ProblemSet3 {
                     break;
             }
         }
-        
+
         if (legit) {
             System.out.println("\n" + fullRank + " of " + fullSuite + ".");
         }
-
     }
     
     /*
@@ -464,8 +461,6 @@ public class ProblemSet3 {
                 System.out.println("\nThat's not a valid scale.");
                 break;
         }
-
-        
     }
     
     /*
@@ -626,7 +621,6 @@ public class ProblemSet3 {
                     break;
             }
         }
-
     }
     
     /*
