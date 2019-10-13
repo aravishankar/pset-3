@@ -96,7 +96,6 @@ public class ProblemSet3 {
         long secondInteger = in.nextLong();
         System.out.print("Enter integer: ");
         long thirdInteger = in.nextLong();
-
         if (thirdInteger == secondInteger && secondInteger == firstInteger) {
             System.out.println("\nSame.");
         } else if (thirdInteger > secondInteger && secondInteger > firstInteger) {
@@ -397,7 +396,8 @@ public class ProblemSet3 {
             case "C":
                 if (temperature >= BOILING_POINT_CELSIUS) {
                     System.out.println("\nGas.");
-                } else if (FREEZING_POINT_CELSIUS < temperature && temperature < BOILING_POINT_CELSIUS) {
+                } else if (FREEZING_POINT_CELSIUS < temperature && 
+                    temperature < BOILING_POINT_CELSIUS) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
@@ -407,7 +407,8 @@ public class ProblemSet3 {
             case "F":
                 if (temperature >= BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nGas.");
-                } else if (FREEZING_POINT_FAHRENHEIT < temperature && temperature < BOILING_POINT_FAHRENHEIT) {
+                } else if (FREEZING_POINT_FAHRENHEIT < temperature && 
+                    temperature < BOILING_POINT_FAHRENHEIT) {
                     System.out.println("\nLiquid.");
                 } else {
                     System.out.println("\nSolid.");
