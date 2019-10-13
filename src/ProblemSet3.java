@@ -133,7 +133,7 @@ public class ProblemSet3 {
 
         System.out.print("\nEnter a letter grade: ");
         String input = in.next();
-        String letter = String.valueOf(input.charAt(0));
+        String letter = (String.valueOf(input.charAt(0))).toUpperCase();
         String additive = "Arbitrary Value";
         try {
             additive = String.valueOf(input.charAt(1));
@@ -287,8 +287,18 @@ public class ProblemSet3 {
                 legit = true;
                 break;
 
+            case "t":
+                fullRank = "Ten";
+                legit = true;
+                break;
+
             case "T":
                 fullRank = "Ten";
+                legit = true;
+                break;
+
+            case "j":
+                fullRank = "Jack";
                 legit = true;
                 break;
 
@@ -297,13 +307,28 @@ public class ProblemSet3 {
                 legit = true;
                 break;
 
+            case "q":
+                fullRank = "Queen";
+                legit = true;
+                break;
+
             case "Q":
                 fullRank = "Queen";
                 legit = true;
                 break;
 
+            case "k":
+                fullRank = "King";
+                legit = true;
+                break;
+
             case "K":
                 fullRank = "King";
+                legit = true;
+                break;
+
+            case "a":
+                fullRank = "Ace";
                 legit = true;
                 break;
 
@@ -325,7 +350,17 @@ public class ProblemSet3 {
                     legit = true;
                     break;
 
+                case "c":
+                    fullSuite = "Clubs";
+                    legit = true;
+                    break;
+
                 case "D":
+                    fullSuite = "Diamonds";
+                    legit = true;
+                    break;
+                
+                case "d":
                     fullSuite = "Diamonds";
                     legit = true;
                     break;
@@ -335,7 +370,17 @@ public class ProblemSet3 {
                     legit = true;
                     break;
 
+                case "h":
+                    fullSuite = "Hearts";
+                    legit = true;
+                    break;
+
                 case "S":
+                    fullSuite = "Spades";
+                    legit = true;
+                    break;
+
+                case "s":
                     fullSuite = "Spades";
                     legit = true;
                     break;
@@ -390,7 +435,7 @@ public class ProblemSet3 {
         System.out.print("\n\nEnter a temperature: ");
         double temperature = in.nextDouble();
         System.out.print("Enter a scale: ");
-        String scale = in.next();
+        String scale = (in.next()).toUpperCase();
 
         switch (scale) {
             case "C":
@@ -432,55 +477,55 @@ public class ProblemSet3 {
     public void months() {
 
         System.out.print("\nEnter a month: ");
-        String month = in.next();
+        String month = (in.next()).toUpperCase();
 
         if (month.length() == 3) {
             switch (month) {
-                case "Jan":
+                case "JAN":
                     System.out.println("\n31 days.");
                     break;
                 
-                case "Feb":
+                case "FEB":
                     System.out.println("\n28 or 29 days.");
                     break;
             
-                case "Mar":
+                case "MAR":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Apr":
+                case "APR":
                     System.out.println("\n30 days.");
                     break;
 
-                case "May":
+                case "MAY":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Jun":
+                case "JUN":
                     System.out.println("\n30 days.");
                     break;
 
-                case "Jul":
+                case "JUL":
                     System.out.println("\n31 days.");
                     break;
             
-                case "Aug":
+                case "AUG":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Sep":
+                case "SEP":
                     System.out.println("\n30 days.");
                     break;
 
-                case "Oct":
+                case "OCT":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Nov":
+                case "NOV":
                     System.out.println("\n30 days.");
                     break;
 
-                case "Dec":
+                case "DEC":
                     System.out.println("\n31 days.");
                     break;
             
@@ -490,47 +535,47 @@ public class ProblemSet3 {
             }
         } else if (month.length() == 4) {
             switch (month) {
-                case "Janu":
+                case "JANU":
                     System.out.println("\n31 days.");
                     break;
                 
-                case "Febr":
+                case "FEBR":
                     System.out.println("\n28 or 29 days.");
                     break;
             
-                case "Marc":
+                case "MARC":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Apri":
+                case "APRI":
                     System.out.println("\n30 days.");
                     break;
 
-                case "June":
+                case "JUNE":
                     System.out.println("\n30 days.");
                     break;
 
-                case "July":
+                case "JULY":
                     System.out.println("\n31 days.");
                     break;
             
-                case "Augu":
+                case "AUGUST":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Sept":
+                case "SEPT":
                     System.out.println("\n30 days.");
                     break;
 
-                case "Octo":
+                case "OCTO":
                     System.out.println("\n31 days.");
                     break;
 
-                case "Nove":
+                case "NOVE":
                     System.out.println("\n30 days.");
                     break;
 
-                case "Dece":
+                case "DECE":
                     System.out.println("\n31 days.");
                     break;
             
@@ -540,47 +585,39 @@ public class ProblemSet3 {
             }
         } else {
             switch (month) {
-                case "January":
+                case "JANUARY":
                     System.out.println("\n31 days.");
                     break;
                 
-                case "February":
+                case "FEBRUARY":
                     System.out.println("\n28 or 29 days.");
                     break;
             
-                case "March":
+                case "MARCH":
                     System.out.println("\n31 days.");
                     break;
 
-                case "April":
+                case "APRIL":
                     System.out.println("\n30 days.");
-                    break;
-
-                case "June":
-                    System.out.println("\n30 days.");
-                    break;
-
-                case "July":
-                    System.out.println("\n31 days.");
                     break;
             
-                case "August":
+                case "AUGUST":
                     System.out.println("\n31 days.");
                     break;
 
-                case "September":
+                case "SEPTEMBER":
                     System.out.println("\n30 days.");
                     break;
 
-                case "October":
+                case "OCTOBER":
                     System.out.println("\n31 days.");
                     break;
 
-                case "November":
+                case "NOVEMBER":
                     System.out.println("\n30 days.");
                     break;
 
-                case "December":
+                case "DECEMBER":
                     System.out.println("\n31 days.");
                     break;
             
