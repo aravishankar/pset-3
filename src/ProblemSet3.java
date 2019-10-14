@@ -223,7 +223,7 @@ public class ProblemSet3 {
             System.out.println("\nYou recieved an F.");
         } else if (grade < THRESHOLD_F) {
             System.out.println("\nGrades below 0 are invalid.");
-        } else if (grade > THRESHOLD_A) {
+        } else if (grade > UPPER_THRESHOLD_A) {
             System.out.println("\nGrades above 100 are invalid.");
         }
     }
